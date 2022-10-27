@@ -1,3 +1,4 @@
+# 실패작
 
 t = int(input())
 result_list = []

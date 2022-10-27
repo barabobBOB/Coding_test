@@ -1,3 +1,5 @@
+import sys
+sys.setrecursionlimit(10000)
 
 def dfs(x, y):
     visited[x][y] = True
@@ -16,7 +18,6 @@ def dfs(x, y):
 for _ in range(int(input())):
     m, n, k = map(int, input().split())
     graph_list = [[0] * n for _ in range(m)]
-    print(graph_list)
     visited = [[False] * n for _ in range(m)]
     
     count = 0
@@ -24,11 +25,11 @@ for _ in range(int(input())):
     for _ in range(k):
         x, y = map(int, input().split())
         graph_list[x][y] = 1
-        print(graph_list)
     
     for i in range(m):
         for j in range(n):
             if graph_list[i][j] == 1 and not visited[i][j]:
                 dfs(i, j)
                 count += 1
+                
     print(count)
