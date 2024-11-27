@@ -3,7 +3,7 @@ class Solution:
         len_nums = len(nums) - 1
 
         for i in range(len_nums + 1):
-            if len_nums == i:
+            if len_nums == i and nums[i] != val:
                 break
 
             if nums[i] == val:
