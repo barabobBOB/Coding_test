@@ -1,6 +1,9 @@
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
         left = 0
+        
+        if len(nums) == 0:
+            return left
 
         for right in range(len(nums)):
             if nums[right] != val:
